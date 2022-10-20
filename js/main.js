@@ -58,11 +58,23 @@ var swiper = new Swiper(".mySwiper1", {
 
 $(window).scroll(function(){
   let scrollY = $(window).scrollTop(); //현재스크롤값
-  console.log(scrollY);
+  // console.log(scrollY);
   if(scrollY >30){
     $('.brand_img').addClass('roll');
   }else {
     $('.brand_img').removeClass('roll');
   }
+});
+
+
+$(window).ready(function(){
+  $('.popup').show();
+  console.log('팝업 노출');
+  
+  // 로그인 팝업창 X
+  $('.close').click(function(){
+    $('.popup').hide();
+    console.log('클릭했어요');
+  });
 });
 
